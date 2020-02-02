@@ -1,6 +1,5 @@
 # media2ascii
-media2ascii aims to convert all forms of visual media to sparse ASCII representations. Most image to ASCII programs convert every piece of the image to a character based on brightness which produces a wall of text,
-but media2ascii uses canny edge detection in hopes of selecting only the most essential visual information from images. By applying this to each frame of a video, we can also produce ascii videos.
+media2ascii aims to convert all forms of visual media to sparse ASCII representations. Most image to ASCII programs convert every piece of the image to a character based on brightness which produces a wall of text, but media2ascii uses canny edge detection in hopes of selecting only the most essential visual information from images. By applying this to each frame of a video, we can also produce ascii videos.
 
 # Requirements
 - Python 3
@@ -28,7 +27,7 @@ Converting a video is more complicated and can take many hours of runtime. Run v
 ```
 python3 vconvert.py <videofilename> --sigma=# --lines=#
 ```
-This will convert the video to a text file that specifies the number of lines in each frame and the text for each frame. I *strongly* recommend playing with sigma values before doing a full run, because converting the full video can take hours, so you want to make sure it looks good.
+This will convert the video to a text file that specifies the number of lines in each frame and the text for each frame. I *strongly* recommend playing with sigma values before doing a full run, because converting the full video can take hours, so you want to make sure it looks good. I've found that the video can still look good even if individual frames look jumbled, because the human eye picks out motion very well.
 
 Now that we have a text file, we use text_to_images.py to convert our text file to a series of pngs using Pillow. All the parameters for this are currently hardcoded, so change the code and run:
 ```
@@ -41,6 +40,8 @@ text_to_images.py also can animate your file in the command line using some code
 Now we have images, and use FFmpeg's command line to knit all the images into a video, learn more at [this URL.](https://hamelot.io/visualization/using-ffmpeg-to-convert-a-set-of-images-into-a-video/)
 
 We now have a silent video, if you want to map audio from an mp3 or another video, FFmpeg can do that too! For more info on this you can look [here](https://superuser.com/questions/590201/add-audio-to-video-using-ffmpeg), but also Google will be your friend.
+
+Check out my video for an example [here](https://www.youtube.com/watch?v=TiBAUSl93yE).
 
 # Versions
 v0.1: Basic image and video converting functionality. 2/2/2020
