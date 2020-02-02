@@ -46,11 +46,11 @@ We now have a silent video, if you want to map audio from an mp3 or another vide
 v0.1: Basic image and video converting functionality. 2/2/2020
 
 # TODO
-Improve image preprocessing and stop relying on the built in Gaussian blur
-Allow the use to directly input an edge map
-Explore supervised learning to convert edges more quickly/open-endedly
-Put more parameters in the UI to make it easier to use
-Expand readme, including how to add custom fonts
+- Improve image preprocessing and stop relying on the built in Gaussian blur
+- Allow the use to directly input an edge map
+- Explore supervised learning to convert edges more quickly/open-endedly
+- Put more parameters in the UI to make it easier to use
+- Expand readme, including how to add custom fonts
 
 # Other references
 Also checkout Brian MacIntosh's converter, it's the only other feature-based image converter I've seen and it takes some really cool (and sometimes more effective) approaches: https://www.brianmacintosh.com/asciiart/
